@@ -28,6 +28,14 @@ public class User {
 	
 	@OneToMany
 	private List<Note> notes;
+	
+	public User(String userName, String password, String firstName, String lastName) {
+		super();
+		this.userName = userName;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
 	public Long getId() {
 		return id;

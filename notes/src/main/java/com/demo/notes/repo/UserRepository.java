@@ -6,4 +6,6 @@ import com.demo.notes.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long>{
 	public User findByUserName(String username);
+	
+	public boolean isUserNameExist(String username);
 }
