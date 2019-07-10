@@ -1,4 +1,4 @@
-package com.demo.notes;
+package com.demo.notes.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

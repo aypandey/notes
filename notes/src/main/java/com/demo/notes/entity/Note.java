@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -19,6 +20,9 @@ public class Note {
 	
 	@OneToOne
 	private Content content;
+	
+	@ManyToOne
+	private User author;
 	
 	@ManyToMany
 	private List<Tag> tags;
@@ -45,5 +49,13 @@ public class Note {
 
 	public void setTags(List<Tag> tags) {
 		this.tags = tags;
+	}
+
+	public User getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(User author) {
+		this.author = author;
 	}
 }
