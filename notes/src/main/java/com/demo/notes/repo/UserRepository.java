@@ -1,10 +1,12 @@
 package com.demo.notes.repo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.demo.notes.entity.User;
 
-public interface UserRepository extends JpaRepository<User, Long>{
+@Repository
+public interface UserRepository extends CrudRepository<User, Long>{
 	public User findByUserName(String username);
 	
 	public boolean isUserNameExist(String username);

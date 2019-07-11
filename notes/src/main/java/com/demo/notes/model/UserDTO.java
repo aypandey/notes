@@ -7,6 +7,10 @@ public class UserDTO {
 	private String firstName;
 	private String lastName;
 	
+	public UserDTO() {
+		
+	}
+	
 	public UserDTO(String username, String password, String firstName, String lastName) {
 		super();
 		this.username = username;

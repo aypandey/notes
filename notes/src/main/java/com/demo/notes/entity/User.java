@@ -1,13 +1,10 @@
 package com.demo.notes.entity;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -25,9 +22,6 @@ public class User {
 	private String firstName;
 	
 	private String lastName;
-	
-	@OneToMany
-	private List<Note> notes;
 	
 	public User(String userName, String password, String firstName, String lastName) {
 		super();
@@ -75,13 +69,5 @@ public class User {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public List<Note> getNotes() {
-		return notes;
-	}
-
-	public void setNotes(List<Note> notes) {
-		this.notes = notes;
 	}
 }

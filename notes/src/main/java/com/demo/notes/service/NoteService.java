@@ -2,24 +2,20 @@ package com.demo.notes.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.demo.notes.entity.Note;
-import com.demo.notes.entity.User;
 import com.demo.notes.repo.NoteRepository;
-import com.demo.notes.repo.UserRepository;
 
 @Service
 public class NoteService {
 	
-	private UserRepository userRepo;
-	
+	@Autowired
 	private NoteRepository noteRepository;
 	
 	public List<Note> getAllNotes(String username) {
-		User user = userRepo.findByUserName(username);
-		
-		return user.getNotes();
+		return null;
 	}
 	
 	public List<Note> searchGlobal(String searchText) {
