@@ -23,6 +23,11 @@ public class User {
 	
 	private String lastName;
 	
+	// Default Constructor
+	public User() {
+		super();
+	}
+	
 	public User(String userName, String password, String firstName, String lastName) {
 		super();
 		this.userName = userName;

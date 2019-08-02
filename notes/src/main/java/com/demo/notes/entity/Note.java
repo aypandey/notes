@@ -42,4 +42,15 @@ public class Note {
 	public void setAuthor(User author) {
 		this.author = author;
 	}
+
+	public Note(String content, User author) {
+		super();
+		this.content = content;
+		this.author = author;
+	}
+
+	public Note() {
+		super();
+	}
+	
 }

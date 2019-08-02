@@ -1,12 +1,9 @@
 package com.demo.notes.entity;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,8 +15,8 @@ public class Tag {
 	
 	private String tagName;
 	
-	@ManyToMany(mappedBy="tags")
-	private List<Note> taggedNotes;
+//	@ManyToMany(mappedBy="tags")
+//	private List<Note> taggedNotes;
 
 	public Long getId() {
 		return id;
@@ -37,11 +34,22 @@ public class Tag {
 		this.tagName = tagName;
 	}
 
-	public List<Note> getTaggedNotes() {
-		return taggedNotes;
+	public Tag(String tagName) {
+		super();
+		this.tagName = tagName;
+	}
+	
+	public Tag() {
+		super();
 	}
 
-	public void setTaggedNotes(List<Note> taggedNotes) {
-		this.taggedNotes = taggedNotes;
-	}
+//	public List<Note> getTaggedNotes() {
+//		return taggedNotes;
+//	}
+//
+//	public void setTaggedNotes(List<Note> taggedNotes) {
+//		this.taggedNotes = taggedNotes;
+//	}
+	
+	
 }
