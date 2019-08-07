@@ -1,5 +1,7 @@
 package com.demo.notes.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,12 +11,15 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="user")
-public class User {
-	@Id
+public class User implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
 	private Long id;
 	
-	@Column(unique=true)
+	@Column(unique=true, nullable = false)
 	private String userName;
 	
 	private String password;

@@ -25,4 +25,8 @@ public class NoteService {
 	public List<Note> searchInternal(String userName, String searchText) {
 		return noteRepository.findNotesByTag(userName, searchText);
 	}
+	
+	public Note createNote(Note note) {
+		return noteRepository.save(note);
+	}
 }
